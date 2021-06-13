@@ -9,7 +9,7 @@ import { CrudService } from 'src/app/shared/crud.service';
 })
 export class AddUserComponent implements OnInit {
 
-  @Input() userObj = {name:'',email:'',phone:0};
+  @Input() userObj = {id:0,name:'',email:'',phone:0};
   constructor(private crudService:CrudService, public router:Router) { }
 
   ngOnInit(): void {
