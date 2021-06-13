@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <div class="d-flex flex-row-reverse bd-highlight">
+        <button class="btn btn-primary" routerLink="/add">Add Employee</button>
+    </div>
+
+    <h2 class="mb-3 text-center">
+        Users Colletion
+    </h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <th scope="col">#Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Action</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let user of Users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
+                <td>
+                    <span class="edit btn-danger btn-sm btn" (click)="delete(user.id)">Delete</span>&nbsp;
+                    <span class="btn edit btn-info btn-sm" routerLink="/edit/{{user.id}}">Edit</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
